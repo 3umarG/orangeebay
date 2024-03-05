@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="PublishConfigData" serverName="Somee" remoteFilesAllowedToDisappearOnAutoupload="false">
+    <serverData>
+      <paths name="Somee">
+        <serverdata>
+          <mappings>
+            <mapping local="$PROJECT_DIR$/Orange_Bay.sln" web="/" />
+            <mapping local="$PROJECT_DIR$/Orange.Core/Orange.Core.csproj" web="/" />
+            <mapping local="$PROJECT_DIR$/Orange.Core/obj/Debug/net7.0/Orange.Core.GlobalUsings.g.cs" web="/" />
+            <mapping local="$PROJECT_DIR$/Orange.Core/obj/Debug/net7.0/Orange.Core.AssemblyInfo.cs" web="/" />
+            <mapping local="$PROJECT_DIR$/Orange.Core/obj/Debug/net7.0/Orange.Core.GeneratedMSBuildEditorConfig.editorconfig" web="/" />
+            <mapping local="C:/Program Files/dotnet/sdk/7.0.203/Sdks/Microsoft.NET.Sdk/analyzers/build/config/analysislevel_7_default.editorconfig" web="/" />
+            <mapping local="$PROJECT_DIR$/Orange.EF/Orange.EF.csproj" web="/" />
+            <mapping local="$PROJECT_DIR$/Orange.EF/obj/Debug/net7.0/Orange.EF.GlobalUsings.g.cs" web="/" />
+            <mapping local="$PROJECT_DIR$/Orange.EF/obj/Debug/net7.0/Orange.EF.AssemblyInfo.cs" web="/" />
+            <mapping local="$PROJECT_DIR$/Orange.EF/obj/Debug/net7.0/Orange.EF.GeneratedMSBuildEditorConfig.editorconfig" web="/" />
+            <mapping local="C:/Program Files/dotnet/sdk/7.0.203/Sdks/Microsoft.NET.Sdk/analyzers/build/config/analysislevel_7_default.editorconfig" web="/" />
+            <mapping local="$PROJECT_DIR$/Orange.Api/Orange.Api.csproj" web="/" />
+            <mapping local="$PROJECT_DIR$/Orange.Api/Properties/launchSettings.json" web="/" />
+            <mapping local="$PROJECT_DIR$/Orange.Api/obj/Debug/net7.0/Orange.Api.GlobalUsings.g.cs" web="/" />
+            <mapping local="$PROJECT_DIR$/Orange.Api/obj/Debug/net7.0/Orange.Api.AssemblyInfo.cs" web="/" />
+            <mapping local="$PROJECT_DIR$/Orange.Api/obj/Debug/net7.0/Orange.Api.GeneratedMSBuildEditorConfig.editorconfig" web="/" />
+            <mapping local="$PROJECT_DIR$/Orange.Api/Program.cs" web="/" />
+            <mapping local="$PROJECT_DIR$/Orange.Api/appsettings.Development.json" web="/" />
+            <mapping local="$PROJECT_DIR$/Orange.Api/appsettings.json" web="/" />
+            <mapping local="C:/Program Files/dotnet/sdk/7.0.203/Sdks/Microsoft.NET.Sdk/analyzers/build/config/analysislevel_7_default.editorconfig" web="/" />
+            <mapping local="$PROJECT_DIR$/Orange.Core/Models/Auth/ApplicationUser.cs" web="/" />
+            <mapping local="$PROJECT_DIR$/Orange.Core/Models/Auth/JWT.cs" web="/" />
+            <mapping local="$PROJECT_DIR$/Orange.Core/Interfaces/Services/IAuthService.cs" web="/" />
+            <mapping local="$PROJECT_DIR$/Orange.EF/ApplicationDbContext.cs" web="/" />
+            <mapping local="$PROJECT_DIR$/Orange.EF/Services/AuthService.cs" web="/" />
+            <mapping local="$PROJECT_DIR$/Orange.Core/Exceptions/CustomExceptionWithStatusCode.cs" web="/" />
+            <mapping local="$PROJECT_DIR$/Orange.Core/Exceptions/GlobalExceptionHandlerMiddleware.cs" web="/" />
+            <mapping local="$PROJECT_DIR$/Orange.Api/Controllers/AuthController.cs" web="/" />
+            <mapping local="$PROJECT_DIR$/Orange.EF/Orange.EF/obj/Orange.EF.csproj.EntityFrameworkCore.targets" web="/" />
+            <mapping local="$PROJECT_DIR$/Orange.EF/Migrations/20231212123435_Initial.cs" web="/" />
+            <mapping local="$PROJECT_DIR$/Orange.EF/Migrations/ApplicationDbContextModelSnapshot.cs" web="/" />
+            <mapping local="$PROJECT_DIR$/Orange.EF/Migrations/20231212123435_Initial.Designer.cs" web="/" />
+            <mapping local="$PROJECT_DIR$/Orange.Core/Models/Auth/UserType.cs" web="/" />
+            <mapping local="$PROJECT_DIR$/Orange.Core/Models/Auth/CultureType.cs" web="/" />
+            <mapping local="$PROJECT_DIR$/Orange.EF/Migrations/20231212144945_Add Cultures and Users Types.cs" web="/" />
+            <mapping local="$PROJECT_DIR$/Orange.EF/Migrations/20231212144945_Add Cultures and Users Types.Designer.cs" web="/" />
+            <mapping local="$PROJECT_DIR$/Orange.Core/Interfaces/Repositories/IBaseRepository.cs" web="/" />
+            <mapping local="$PROJECT_DIR$/Orange.Core/Models/Auth/UserImage.cs" web="/" />
+            <mapping local="$PROJECT_DIR$/Orange.EF/Migrations/20231212194045_Add Users Images Table.cs" web="/" />
+            <mapping local="$PROJECT_DIR$/Orange.EF/Migrations/20231212194045_Add Users Images Table.Designer.cs" web="/" />
+            <mapping local="$PROJECT_DIR$/Orange.Core/Interfaces/Repositories/IBaseImagesRepository.cs" web="/" />
+            <mapping local="$PROJECT_DIR$/Orange.EF/Repositories/Base/BaseImagesRepository.cs" web="/" />
+            <mapping local="$PROJECT_DIR$/Orange.EF/Repositories/Impl/UsersImagesRepository.cs" web="/" />
+            <mapping local="$PROJECT_DIR$/Orange.Api/Controllers/ImagesController.cs" web="/" />
+            <mapping local="$PROJECT_DIR$/Orange.EF/Migrations/20231212202353_Add Photo Url to users table.cs" web="/" />
+            <mapping local="$PROJECT_DIR$/Orange.EF/Migrations/20231212202353_Add Photo Url to users table.Designer.cs" web="/" />
+            <mapping local="$PROJECT_DIR$/Orange.Core/DTOs/Auth/AuthModelResponseDto.cs" web="/" />
+            <mapping local="$PROJECT_DIR$/Orange.Core/DTOs/Auth/ResetPasswordDto.cs" web="/" />
+            <mapping local="$PROJECT_DIR$/Orange.Core/DTOs/Auth/ResponseModelDto.cs" web="/" />
+            <mapping local="$PROJECT_DIR$/Orange.Core/DTOs/Auth/UserLoginDto.cs" web="/" />
+            <mapping local="$PROJECT_DIR$/Orange.Core/DTOs/Auth/UserRegisterDto.cs" web="/" />
+            <mapping local="$PROJECT_DIR$/Orange.Core/DTOs/Programs/Request/ProgramImagesRequestDto.cs" web="/" />
+            <mapping local="$PROJECT_DIR$/Orange.Core/DTOs/Programs/Request/ProgramReviewRequestDto.cs" web="/" />
+            <mapping local="$PROJECT_DIR$/Orange.Core/DTOs/Programs/ProgramOverviewResponseDto.cs" web="/" />
+            <mapping local="$PROJECT_DIR$/Orange.Core/DTOs/Programs/ProgramPlanResponseDto.cs" web="/" />
+            <mapping local="$PROJECT_DIR$/Orange.Core/DTOs/Programs/ProgramResponseDto.cs" web="/" />
+            <mapping local="$PROJECT_DIR$/Orange.Core/DTOs/Programs/ProgramReviewResponseDto.cs" web="/" />
+            <mapping local="$PROJECT_DIR$/Orange.Core/Interfaces/Services/IProgramsService.cs" web="/" />
+            <mapping local="$PROJECT_DIR$/Orange.Core/Models/Programs/Program.cs" web="/" />
+            <mapping local="$PROJECT_DIR$/Orange.Core/Models/Programs/ProgramImage.cs" web="/" />
+            <mapping local="$PROJECT_DIR$/Orange.Core/Models/Programs/ProgramPlan.cs" web="/" />
+            <mapping local="$PROJECT_DIR$/Orange.Core/Models/Programs/ProgramPrice.cs" web="/" />
+            <mapping local="$PROJECT_DIR$/Orange.Core/Models/Programs/ProgramReview.cs" web="/" />
+            <mapping local="$PROJECT_DIR$/Orange.Core/Utils/AppUtils.cs" web="/" />
+            <mapping local="$PROJECT_DIR$/Orange.EF/Repositories/Impl/ProgramsImagesRepository.cs" web="/" />
+            <mapping local="$PROJECT_DIR$/Orange.EF/Repositories/Impl/ProgramsRepository.cs" web="/" />
+            <mapping local="$PROJECT_DIR$/Orange.EF/Repositories/Base/BaseRepository.cs" web="/" />
+            <mapping local="$PROJECT_DIR$/Orange.EF/Services/ProgramsService.cs" web="/" />
+            <mapping local="$PROJECT_DIR$/Orange.EF/Migrations/20231213195045_Add Programs Prices.cs" web="/" />
+            <mapping local="$PROJECT_DIR$/Orange.EF/Migrations/20231213151713_Add Index to Programs Images Title.cs" web="/" />
+            <mapping local="$PROJECT_DIR$/Orange.EF/Migrations/20231213151411_Add Programs Without Prices.cs" web="/" />
+            <mapping local="$PROJECT_DIR$/Orange.EF/Migrations/20231213195045_Add Programs Prices.Designer.cs" web="/" />
+            <mapping local="$PROJECT_DIR$/Orange.EF/Migrations/20231213151713_Add Index to Programs Images Title.Designer.cs" web="/" />
+            <mapping local="$PROJECT_DIR$/Orange.EF/Migrations/20231213151411_Add Programs Without Prices.Designer.cs" web="/" />
+            <mapping local="$PROJECT_DIR$/Orange.Api/Controllers/ProgramsController.cs" web="/" />
+            <mapping local="$PROJECT_DIR$/Orange.Core/Models/Wishlist/ProgramWishlist.cs" web="/" />
+            <mapping local="$PROJECT_DIR$/Orange.EF/Migrations/20231214223210_Add Wishlists.cs" web="/" />
+            <mapping local="$PROJECT_DIR$/Orange.EF/Migrations/20231214223210_Add Wishlists.Designer.cs" web="/" />
+            <mapping local="$PROJECT_DIR$/Orange.Core/Interfaces/Services/IWishlistsService.cs" web="/" />
+            <mapping local="$PROJECT_DIR$/Orange.EF/Services/WishlistsService.cs" web="/" />
+            <mapping local="$PROJECT_DIR$/Orange.Api/Controllers/WishlistsController.cs" web="/" />
+            <mapping local="$PROJECT_DIR$/Orange.Api/Controllers/ProfileController.cs" web="/" />
+            <mapping local="$PROJECT_DIR$/Orange.Core/Interfaces/Services/IProfilesService.cs" web="/" />
+            <mapping local="$PROJECT_DIR$/Orange.EF/Services/ProfilesService.cs" web="/" />
+            <mapping local="$PROJECT_DIR$/Orange.Core/DTOs/Profile/ProfileResponseDto.cs" web="/" />
+            <mapping local="$PROJECT_DIR$/Orange.Core/DTOs/Profile/ChangePasswordRequestDto.cs" web="/" />
+            <mapping local="$PROJECT_DIR$/Orange.Api/appsettings.Production.json" web="/" />
+            <mapping local="$PROJECT_DIR$" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
+    </serverData>
+  </component>
+</project>

@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Orange.Core", "Orange.Core\Orange.Core.csproj", "{27E560B4-2BD3-4BFF-A6D5-7EA8747FAD38}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Orange.EF", "Orange.EF\Orange.EF.csproj", "{20FF868D-F87D-40B5-9B55-0B2A6492558A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Orange.Api", "Orange.Api\Orange.Api.csproj", "{145EB3EB-B81F-4943-A435-E8223F508BB8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{27E560B4-2BD3-4BFF-A6D5-7EA8747FAD38}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{27E560B4-2BD3-4BFF-A6D5-7EA8747FAD38}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{27E560B4-2BD3-4BFF-A6D5-7EA8747FAD38}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{27E560B4-2BD3-4BFF-A6D5-7EA8747FAD38}.Release|Any CPU.Build.0 = Release|Any CPU
+		{20FF868D-F87D-40B5-9B55-0B2A6492558A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{20FF868D-F87D-40B5-9B55-0B2A6492558A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{20FF868D-F87D-40B5-9B55-0B2A6492558A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{20FF868D-F87D-40B5-9B55-0B2A6492558A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{145EB3EB-B81F-4943-A435-E8223F508BB8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{145EB3EB-B81F-4943-A435-E8223F508BB8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{145EB3EB-B81F-4943-A435-E8223F508BB8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{145EB3EB-B81F-4943-A435-E8223F508BB8}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
