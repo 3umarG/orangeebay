@@ -446,7 +446,7 @@ public class DashboardService : IDashboardService
         }).ToList();
 
         service.Name = dto.Name;
-        service.Description = dto.Name;
+        service.Description = dto.Description;
         _dbContext.AdditionalServicePrices.RemoveRange(service.AdditionalServicePrices);
         service.AdditionalServicePrices = newPrices;
 
@@ -663,19 +663,21 @@ public class DashboardService : IDashboardService
             program.Location,
             program.DurationInHours,
             program.DaysBeforeCancellation,
-            program.ProgramPlans?.Select(plan => new ProgramPlanRequestDto(
+            program.ProgramPlans?.Select(plan => new ProgramPlanResponseDto(
+                plan.Id,
                 plan.Time,
                 plan.Description
             )).ToList() ??
-            new List<ProgramPlanRequestDto>(),
-            program.ProgramPrices?.Select(price => new ProgramPriceRequestDto(
+            new List<ProgramPlanResponseDto>(),
+            program.ProgramPrices?.Select(price => new ProgramPriceResponseDto(
+                price.Id,
                 price.PricePerChild,
                 price.PricePerAdult,
                 price.FromDate,
                 price.ToDate,
                 price.UserTypeId
             )).ToList() ??
-            new List<ProgramPriceRequestDto>(),
+            new List<ProgramPriceResponseDto>(),
             program.ProgramIncludedDetails?.Select(included => included.Description).ToList() ?? new List<string>(),
             program.ProgramExcludedDetails?.Select(exc => exc.Description).ToList() ?? new List<string>(),
             program.ProgramNotes?.Select(note => note.Note).ToList() ?? new List<string>()

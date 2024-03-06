@@ -10,9 +10,24 @@ public record DashboardProgramResponseDto(
     string? Location,
     int DurationInHours,
     int? DaysBeforeCancellation,
-    List<ProgramPlanRequestDto> ProgramPlans,
-    List<ProgramPriceRequestDto> ProgramPrices,
+    List<ProgramPlanResponseDto> ProgramPlans,
+    List<ProgramPriceResponseDto> ProgramPrices,
     List<string> ProgramIncludedDetails,
     List<string> ProgramExcludedDetails,
     List<string> ProgramNotes
-    );
+);
+
+public record ProgramPlanResponseDto(
+    int Id,
+    string Time,
+    string Description
+);
+
+public record ProgramPriceResponseDto(
+    int Id,
+    double PricePerChild,
+    double PricePerAdult,
+    DateTime FromDate,
+    DateTime ToDate,
+    int UserTypeId
+);
