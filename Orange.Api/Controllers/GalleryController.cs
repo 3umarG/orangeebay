@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Orange_Bay.DTOs.Auth;
 using Orange_Bay.DTOs.Gallery;
+using Orange_Bay.DTOs.Shared;
 using Orange_Bay.Interfaces.Services;
 
 namespace Orange.Api.Controllers;
@@ -28,7 +29,7 @@ public class GalleryController
     public async Task<IActionResult> GetAllGalleryImagesAsync([FromQuery] int page = 0)
     {
         var result = await _galleryImagesService.GetAllImagesAsync(page);
-        var response = ResponseModelDto<List<GalleryImageResponseDto>>.BuildSuccessResponse(result);
+        var response = ResponseModelDto<PaginatedResponseDto<GalleryImageResponseDto>>.BuildSuccessResponse(result);
         return new OkObjectResult(response);
     }
 

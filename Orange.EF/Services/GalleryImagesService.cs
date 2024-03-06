@@ -1,5 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Orange_Bay.DTOs.Gallery;
+using Orange_Bay.DTOs.Shared;
 using Orange_Bay.Exceptions;
 using Orange_Bay.Interfaces.Services;
 using Orange_Bay.Models.Gallery;
@@ -34,8 +35,8 @@ public class GalleryImagesService : IGalleryImagesService
                 throw new CustomExceptionWithStatusCode(404, $"Not Found Image Type with id : {imageTypeId}");
             }
 
-          
-            var photoUrl = await _imageSaver.GenerateImageUrl(image,"gallery");
+
+            var photoUrl = await _imageSaver.GenerateImageUrl(image, "gallery");
             var programImage = new GalleryImage
             {
                 PhotoUrl = photoUrl,
@@ -52,13 +53,22 @@ public class GalleryImagesService : IGalleryImagesService
         return generatedImages.Select(image => image.PhotoUrl).ToList();
     }
 
-    public async Task<List<GalleryImageResponseDto>> GetAllImagesAsync(int page)
+    public async Task<PaginatedResponseDto<GalleryImageResponseDto>> GetAllImagesAsync(int page)
     {
         var galleryImages = page == 0
             ? await GetFullGalleryImages()
             : await GetPaginatedGalleryImages(page);
 
-        return galleryImages;
+        var imagesCount = _dbContext.GalleryImages.Count();
+        var pages = (int)Math.Ceiling((double)imagesCount / AppUtils.NumberOfItemsPerPage);
+
+
+        return new PaginatedResponseDto<GalleryImageResponseDto>
+        {
+            Items = galleryImages,
+            Pages = pages,
+            CurrentPage = page
+        };
     }
 
     private async Task<List<GalleryImageResponseDto>> GetPaginatedGalleryImages(int page)
