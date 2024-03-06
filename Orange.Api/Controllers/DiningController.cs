@@ -37,4 +37,28 @@ public class DiningController
         var response = ResponseModelDto<List<DiningItem>>.BuildSuccessResponse(result);
         return new OkObjectResult(response);
     }
+    
+    [HttpGet("{id:int}")]
+    public async Task<IActionResult> GetDiningByIdAsync(int id)
+    {
+        var result = await _diningService.GetDiningByIdAsync(id);
+        var response = ResponseModelDto<DiningItem>.BuildSuccessResponse(result);
+        return new OkObjectResult(response);
+    }
+
+    [HttpPut("{id:int}")]
+    public async Task<IActionResult> UpdateDiningAsync(int id, [FromForm] DiningRequestDto requestDto)
+    {
+        var result = await _diningService.UpdateDiningById(id, requestDto);
+        var response = ResponseModelDto<DiningItem>.BuildSuccessResponse(result);
+        return new OkObjectResult(response);
+    }
+
+    [HttpDelete("{id:int}")]
+    public async Task<IActionResult> DeleteDiningByIdAsync(int id)
+    {
+        var result = await _diningService.DeleteAsync(id);
+        var response = ResponseModelDto<DiningItem>.BuildSuccessResponse(result);
+        return new OkObjectResult(response);
+    }
 }

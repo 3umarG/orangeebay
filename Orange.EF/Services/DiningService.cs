@@ -21,7 +21,7 @@ public class DiningService : IDiningService
     {
         await CheckDiningCategoryExistenceAsync(requestDto.DiningCategoryId);
 
-        var diningPhotoUrl = await _imageSaver.GenerateImageUrl(requestDto.Image, "dining");
+        var diningPhotoUrl = await _imageSaver.GenerateImageUrl(requestDto.Image!, "dining");
 
         var diningItem = (await _dbContext.DiningItems.AddAsync(
             new DiningItem
@@ -31,8 +31,8 @@ public class DiningService : IDiningService
                 Name = requestDto.Name,
                 FoodType = requestDto.FoodType,
                 PhotoUrl = diningPhotoUrl,
-                EndAt = requestDto.EndTime,
-                StartFrom = requestDto.StartTime,
+                EndAt = requestDto.EndAt,
+                StartFrom = requestDto.StartFrom,
                 Price = requestDto.Price
             })).Entity;
 
@@ -60,5 +60,57 @@ public class DiningService : IDiningService
                 .Where(item => item.DiningCategoryId == categoryId)
                 .ToListAsync();
         return diningItemsByCategoryId;
+    }
+
+    public async Task<DiningItem> UpdateDiningById(int id, DiningRequestDto requestDto)
+    {
+        var dining = await _dbContext.DiningItems.FindAsync(id);
+        if (dining is null)
+        {
+            throw new CustomExceptionWithStatusCode(404, $"Not Found dining with ID : {id}");
+        }
+
+        await CheckDiningCategoryExistenceAsync(requestDto.DiningCategoryId);
+
+        dining.Name = requestDto.Name;
+        dining.Description = requestDto.Description;
+        dining.StartFrom = requestDto.StartFrom;
+        dining.EndAt = requestDto.EndAt;
+        dining.FoodType = requestDto.FoodType;
+        dining.Price = requestDto.Price;
+        dining.DiningCategoryId = requestDto.DiningCategoryId;
+        if (requestDto.Image is not null)
+            dining.PhotoUrl = await _imageSaver.GenerateImageUrl(requestDto.Image, "dining");
+
+        _dbContext.DiningItems.Update(dining);
+        await _dbContext.SaveChangesAsync();
+
+        return dining;
+    }
+
+    public async Task<DiningItem> DeleteAsync(int id)
+    {
+        var dining = await _dbContext.DiningItems.FindAsync(id);
+        if (dining is null)
+        {
+            throw new CustomExceptionWithStatusCode(404, $"Not Found dining with ID : {id}");
+        }
+
+        _dbContext.DiningItems.Remove(dining);
+        await _dbContext.SaveChangesAsync();
+
+
+        return dining;
+    }
+
+    public async Task<DiningItem> GetDiningByIdAsync(int id)
+    {
+        var dining = await _dbContext.DiningItems.FindAsync(id);
+        if (dining is null)
+        {
+            throw new CustomExceptionWithStatusCode(404, $"Not Found dining with ID : {id}");
+        }
+
+        return dining;
     }
 }
