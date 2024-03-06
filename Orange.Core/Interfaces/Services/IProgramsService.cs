@@ -7,7 +7,7 @@ namespace Orange_Bay.Interfaces.Services;
 public interface IProgramsService
 {
     Task<List<ProgramResponseDto>> GetAllProgramsByUserTypeAsync(int? userId, DateTime? dateTime);
-    Task<ProgramOverviewResponseDto> GetProgramOverviewAsync(int programId,int userTypeId);
+    Task<ProgramOverviewResponseDto> GetProgramOverviewAsync(int programId, int? userTypeId);
     Task<List<ProgramPlanResponseDto>> GetProgramPlansAsync(int programId);
     Task<PaginatedResponseDto<ProgramReviewResponseDto>> GetProgramReviewsByIdAsync(int programId, int page);
     Task<ProgramReviewResponseDto> AddProgramReviewAsync(ProgramReviewRequestDto dto);

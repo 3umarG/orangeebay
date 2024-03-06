@@ -22,17 +22,16 @@ public class ProgramsController
     }
 
     [HttpGet]
-    public async Task<IActionResult> GetAllProgramsByUserTypeId(int? userId , DateTime? date)
+    public async Task<IActionResult> GetAllProgramsByUserTypeId(int? userId, DateTime? date)
     {
-        var result = await _programsService.GetAllProgramsByUserTypeAsync(userId , date);
-        var response = new ResponseModelDto<List<ProgramResponseDto>>(true, null, 200,result);
+        var result = await _programsService.GetAllProgramsByUserTypeAsync(userId, date);
+        var response = new ResponseModelDto<List<ProgramResponseDto>>(true, null, 200, result);
         return new OkObjectResult(response);
     }
 
     [HttpGet("{id:int}")]
-    public async Task<IActionResult> GetProgramByIdAsync(int id)
+    public async Task<IActionResult> GetProgramByIdAsync([FromHeader(Name = "uid")] int? userId,int id)
     {
-        var userId = _tokenService.ExtractUserIdFromToken();
         var result = await _programsService.GetProgramOverviewAsync(id,userId);
         var response = ResponseModelDto<ProgramOverviewResponseDto>.BuildSuccessResponse(result);
         return new OkObjectResult(response);

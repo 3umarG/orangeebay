@@ -132,9 +132,12 @@ public class ProgramsService : IProgramsService
         return date >= fromDate && date <= toDate;
     }
 
-    public async Task<ProgramOverviewResponseDto> GetProgramOverviewAsync(int programId, int userId)
+    public async Task<ProgramOverviewResponseDto> GetProgramOverviewAsync(int programId, int? userId)
     {
-        var userTypeId = await _authService.FindUserTypeIdByUserAsync(userId);
+        var userTypeId =
+            userId is not null
+                ? await _authService.FindUserTypeIdByUserAsync(userId.Value)
+                : 1;
 
         var program = await FindProgramByIdAsync(programId, userTypeId);
 
